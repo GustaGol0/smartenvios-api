@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ... o resto dos models continua igual ...
+model Lead {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  createdAt DateTime @default(now())
+  intentions Intention[]
+}
+
+model Intention {
+  id            String   @id @default(uuid())
+  zipcode_start String
+  zipcode_end   String
+  createdAt     DateTime @default(now())
+  leadId String?
+  lead   Lead?   @relation(fields: [leadId], references: [id])
+}
