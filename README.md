@@ -62,7 +62,7 @@ npm test
 ---
 
 ## Demo do Projeto
-Abaixo está o vídeo de apresentação onde mostro a API funcionando:
-https://youtu.be/ZUkOghRQNp8
+Ao lado está o vídeo de apresentação onde mostro a API funcionando:
+https://youtu.be/F_4NMQh1XPo
 
 Feito por Gustavo
