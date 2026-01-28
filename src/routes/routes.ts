@@ -10,11 +10,11 @@ const prisma = new PrismaClient();
 router.post('/leads', leadController.create);
 router.get('/leads', leadController.index);
 
-// Rota de Intenção (Deixei simples no arquivo de rotas msm pra agilizar)
+// Rota de Intenção
 router.post('/intentions', async (req, res) => {
   const { zipcode_start, zipcode_end } = req.body;
   const intention = await prisma.intention.create({
-    data: { zipcode_start, zipcode_end } // Cria sem Lead (anônima)
+    data: { zipcode_start, zipcode_end }
   });
   return res.json(intention);
 });

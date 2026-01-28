@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import { z } from 'zod'; // O Xerife da validação
+import { z } from 'zod';
 import { LeadService } from '../services/LeadService.js';
 
 const leadService = new LeadService();
 
 export class LeadController {
   async create(req: Request, res: Response) {
-    // 1. Define as regras (Schema)
+    // 1. Define as regras
     const createLeadSchema = z.object({
       name: z.string().min(3, "Nome deve ter pelo menos 3 letras"),
       email: z.string().email("Email inválido"),

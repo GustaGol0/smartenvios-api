@@ -1,7 +1,7 @@
 import express from 'express';
-import swaggerUi from 'swagger-ui-express'; // <--- Importe isso
+import swaggerUi from 'swagger-ui-express';
 import { router } from './routes/routes.js';
-import { swaggerConfig } from './docs/swagger.js'; // <--- Importe a config
+import { swaggerConfig } from './docs/swagger.js';
 
 const app = express();
 

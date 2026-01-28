@@ -7,7 +7,7 @@ const emailService = new EmailService();
 interface CreateLeadDTO {
   name: string;
   email: string;
-  intentionId?: string; // Opcional: Se vier, a gente vincula
+  intentionId?: string;
 }
 
 export class LeadService {
@@ -31,7 +31,7 @@ export class LeadService {
       });
     }
 
-    // 4. Envia o Email (Assíncrono, não trava a resposta)
+    // 4. Envia o Email
     emailService.sendWelcomeEmail(name, email);
 
     return lead;
