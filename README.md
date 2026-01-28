@@ -60,4 +60,9 @@ npm test
 | **GET** | `/leads`      | Lista todos os leads e seus pedidos.           |
 
 ---
-Feito com 💜 por Gustavo
+
+## Demo do Projeto
+Abaixo está o vídeo de apresentação onde mostro a API funcionando:
+https://youtu.be/ZUkOghRQNp8
+
+Feito por Gustavo
